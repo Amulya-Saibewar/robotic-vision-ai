@@ -1,0 +1,21 @@
+video_id,caption,RAFT_outcome,RAFT_cause,RAFT_confidence,RAFT_n_stages,Depth_outcome,Depth_cause,Depth_confidence,Depth_n_stages,SAM2_Masks_outcome,SAM2_Masks_cause,SAM2_Masks_confidence,SAM2_Masks_n_stages,Cosmos_outcome,Cosmos_cause,Cosmos_confidence,Cosmos_n_stages
+task_0000,"The video is a first-person perspective, possibly from a robotic or mechanical p",failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,failure,insufficient stabilization or force application during the grasp attempt,0.78,1
+task_0001,"The video is set in a modern, well-lit office environment with a sleek, minimali",failure,unstable_movement,0.55,5,failure,incorrect_placement,0.6,4,N/A,N/A,0.0,0,success,none,0.97,3
+task_0002,The video is a demonstration of robotic arms interacting with objects on a woode,failure,timeout,0.6,2,failure,incorrect_placement,0.6,5,N/A,N/A,0.0,0,success,none,0.97,1
+task_0003,"The video is a demonstration of robotic manipulation, focusing on two robotic ar",failure,timeout,0.6,2,success,none,0.7,4,N/A,N/A,0.0,0,success,none,0.96,2
+task_0004,The video is a demonstration of robotic arms interacting with a piece of clothin,failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,2
+task_0005,"The video is a demonstration of robotic arms in a controlled environment, likely",failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0006,The video is a demonstration of robotic arms interacting with a piece of clothin,failure,unstable_movement,0.55,5,success,none,0.7,6,N/A,N/A,0.0,0,success,none,0.97,1
+task_0007,The video is a demonstration of robotic arms performing a task on a table. Two r,failure,timeout,0.6,2,success,none,0.7,4,N/A,N/A,0.0,0,success,none,0.97,1
+task_0008,The video is a demonstration of robotic arms interacting with a cup of coffee on,failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0009,The video is a demonstration of robotic arms performing tasks in a bathroom sett,failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.87,1
+task_0010,The video is a demonstration of robotic arms interacting with objects on a shelf,failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0011,The video is a detailed demonstration of a robotic system interacting with packa,failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0012,"The video is set in a modern, clean laboratory or workshop environment, featurin",failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0013,The video is a demonstration of robotic arms interacting with a plastic containe,failure,timeout,0.6,2,success,none,0.7,6,N/A,N/A,0.0,0,success,none,0.93,1
+task_0014,The video is a demonstration of robotic arms interacting with a piece of clothin,failure,unstable_movement,0.55,5,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0015,The video is a demonstration of robotic arms interacting with a trash can in an ,failure,timeout,0.6,2,failure,incorrect_placement,0.6,5,N/A,N/A,0.0,0,failure,"attempted interaction with the trash bin resulted in no measurable displacement or manipulation, indicating insufficient force or alignment for successful execution.",0.87,1
+task_0016,"The video is a demonstration of robotic arms interacting with a kitchen setting,",failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.99,1
+task_0017,The video is a demonstration of robotic arms interacting with a piece of clothin,success,none,0.75,6,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,1
+task_0018,A pair of robotic arms are engaged in a task on a tabletop. The setting is a mod,failure,timeout,0.6,2,failure,incorrect_placement,0.6,5,N/A,N/A,0.0,0,success,none,0.97,1
+task_0019,"The video is a demonstration of robotic arms interacting with a kitchen setup, l",failure,timeout,0.6,2,failure,missed_grasp,0.55,2,N/A,N/A,0.0,0,success,none,0.97,3

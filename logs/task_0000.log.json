@@ -1,0 +1,384 @@
+{
+  "video_id": "task_0000",
+  "stages": [
+    {
+      "stage": "STAGE 1: data_ingestion",
+      "inputs": {
+        "rgb_path": "/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/videos/task_0000.mp4",
+        "depth_path": "/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/depth_vids/task_0000.mp4",
+        "seg_pkl_path": "/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/sam2_pkls/task_0000.pkl"
+      },
+      "notes": [
+        "RGB=(121, 480, 640, 3)  depth=(121, 480, 640)  masks=121"
+      ],
+      "outputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "depth": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            480,
+            640
+          ],
+          "dtype": "uint8"
+        },
+        "seg_masks": {
+          "type": "list",
+          "len": 121
+        }
+      },
+      "elapsed_s": 1.5998
+    },
+    {
+      "stage": "STAGE 2: preprocessing",
+      "inputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            480,
+            640,
+            3
+          ],
+          "dtype": "uint8"
+        },
+        "depth": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            480,
+            640
+          ],
+          "dtype": "uint8"
+        },
+        "seg": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            480,
+            640
+          ],
+          "dtype": "int32"
+        }
+      },
+      "notes": [
+        "aligned T=121, resized+normalised"
+      ],
+      "outputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "depth": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "float32"
+        },
+        "seg": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "int32"
+        }
+      },
+      "elapsed_s": 0.1219
+    },
+    {
+      "stage": "STAGE 3: segmentation_feature_extraction",
+      "inputs": {
+        "seg": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "int32"
+        }
+      },
+      "notes": [
+        "obj_label=8 robot_label=18 mean_interaction=0.361"
+      ],
+      "outputs": {
+        "object_mask": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "uint8"
+        },
+        "robot_mask": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "uint8"
+        },
+        "trajectory": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "interaction": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        }
+      },
+      "elapsed_s": 0.4164
+    },
+    {
+      "stage": "STAGE 4: hybrid_depth_feature_extraction",
+      "inputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "depth_video": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "float32"
+        },
+        "object_mask": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "uint8"
+        }
+      },
+      "notes": [
+        "Running Depth-Anything-V2 on 121 frames ...",
+        "fused: 0.5 * model_depth + 0.5 * dataset_depth",
+        "depth_curve range=[0.358,0.375]"
+      ],
+      "outputs": {
+        "depth_maps": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "float32"
+        },
+        "depth_curve": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        },
+        "depth_diff": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        }
+      },
+      "elapsed_s": 26.385
+    },
+    {
+      "stage": "STAGE 5: motion_feature_extraction",
+      "inputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224,
+            3
+          ],
+          "dtype": "float32"
+        },
+        "object_mask": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224
+          ],
+          "dtype": "uint8"
+        }
+      },
+      "notes": [
+        "Running RAFT-Large optical flow on 120 frame pairs ...",
+        "mean_motion=50.026  peak=102.307"
+      ],
+      "outputs": {
+        "motion_curve": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        }
+      },
+      "elapsed_s": 5.9263
+    },
+    {
+      "stage": "STAGE 6: temporal_understanding",
+      "inputs": {
+        "rgb": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            224,
+            224,
+            3
+          ],
+          "dtype": "float32"
+        }
+      },
+      "notes": [
+        "Running V-JEPA 2 on clip shape=(121, 224, 224, 3) ...",
+        "temporal_embeddings=(121, 1024)  video_embedding norm=51.490"
+      ],
+      "outputs": {
+        "temporal_embeddings": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            1024
+          ],
+          "dtype": "float32"
+        },
+        "video_embedding": {
+          "type": "ndarray",
+          "shape": [
+            1024
+          ],
+          "dtype": "float32"
+        }
+      },
+      "elapsed_s": 24.5883
+    },
+    {
+      "stage": "STAGE 7: multimodal_fusion",
+      "inputs": {
+        "trajectory": {
+          "type": "ndarray",
+          "shape": [
+            121,
+            2
+          ],
+          "dtype": "float32"
+        },
+        "depth_curve": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        },
+        "motion_curve": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        },
+        "interaction": {
+          "type": "ndarray",
+          "shape": [
+            121
+          ],
+          "dtype": "float32"
+        }
+      },
+      "notes": [
+        "mp=steady dp=stable hints=['move']"
+      ],
+      "outputs": {
+        "stage_hints": {
+          "type": "list",
+          "len": 1
+        },
+        "motion_pattern": "steady",
+        "depth_pattern": "stable",
+        "behavior_summary": "stages=move; motion=steady; depth=stable; traj_dx=-2.7; traj_dy=0.9; peak_interaction=0.36; embed_norm=51.490"
+      },
+      "elapsed_s": 0.0011
+    },
+    {
+      "stage": "STAGE 8: cosmos_reasoning",
+      "inputs": {
+        "prompt_len": 1069,
+        "canvas_size": {
+          "type": "tuple",
+          "len": 2
+        }
+      },
+      "notes": [
+        "PROMPT:\nYou are a physical-AI analyst evaluating a robotic manipulation video.\n\nYou receive structured sensor signals computed from the video:\n  \u2022 stage_hints     : action stages detected from motion, depth and segmentation signals\n  \u2022 motion_pattern  : character of end-effector motion\n  \u2022 depth_pattern   : object depth change over time\n  \u2022 behavior_summary: compact feature string\n\nTASK: Infer what happened in this robotic episode.\n\nWatch the signals and reason about the causal sequence:\n  - What stages did the robot go through?\n  - Did it succeed or fail?\n  - If it failed, what caused the failure?\n\nRespond with ONLY a valid JSON object:\n{\n  \"task_stages\": [\"<stage1>\", \"<stage2>\", ...],\n  \"final_result\": \"success\" or \"failure\",\n  \"failure_reason\": \"<precise cause if failure, else empty string>\",\n  \"reasoning\": \"<brief description of what happened>\"\n}\n\nstage_hints: ['move']\nmotion_pattern: steady\ndepth_pattern: stable\nbehavior_summary: stages=move; motion=steady; depth=stable; traj_dx=-2.7; traj_dy=0.9; peak_interaction=0.36; embed_norm=51.490\n\nReturn JSON only.",
+        "RAW OUTPUT: ```json\n{\n  \"task_stages\": [\n    \"move\"\n  ],\n  \"final_result\": \"success\",\n  \"failure_reason\": \"\",\n  \"reasoning\": \"The robot moved steadily in a stable environment with no significant interaction or depth changes, indicating a smooth and controlled motion.\"\n}\n```",
+        "PARSED \u2192 final_result=success stages=['move']"
+      ],
+      "outputs": {
+        "task_stages": {
+          "type": "list",
+          "len": 1
+        },
+        "final_result": "success",
+        "failure_reason": "",
+        "used_cosmos": true
+      },
+      "elapsed_s": 2.2732
+    },
+    {
+      "stage": "STAGE 9: confidence_scoring",
+      "inputs": {},
+      "notes": [
+        "ms=0.789 ds=0.989 ins=0.996 ts=0.990 align=1.000"
+      ],
+      "outputs": {
+        "confidence": 0.971125173277693
+      },
+      "elapsed_s": 0.0005
+    }
+  ]
+}

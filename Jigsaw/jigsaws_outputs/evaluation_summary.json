@@ -1,0 +1,198 @@
+{
+  "n_samples": 10,
+  "mean_gesture_accuracy": 0.21903376105206748,
+  "mean_grs_error": 4.4,
+  "skill_accuracy": 0.7,
+  "per_trial": [
+    {
+      "trial_id": "Knot_Tying_B001",
+      "skill_gt": "N",
+      "grs_gt": 13,
+      "grs_pred": 10,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.29493087557603687,
+      "smoothness": 0.8081199248631795,
+      "bilateral_coordination": 0.46537548303604126,
+      "task_duration_frames": 1735,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.637,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning",
+        "Long task duration \u2014 time efficiency could be improved"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_B002",
+      "skill_gt": "N",
+      "grs_gt": 9,
+      "grs_pred": 12,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.3112761647535449,
+      "smoothness": 0.832942787806193,
+      "bilateral_coordination": 0.46123722195625305,
+      "task_duration_frames": 1480,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.647,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_C001",
+      "skill_gt": "I",
+      "grs_gt": 20,
+      "grs_pred": 14,
+      "skill_pred": "I",
+      "gesture_accuracy": 0.25895765472312704,
+      "smoothness": 0.8414535045623779,
+      "bilateral_coordination": 0.5020735263824463,
+      "task_duration_frames": 1227,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.672,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_C002",
+      "skill_gt": "I",
+      "grs_gt": 22,
+      "grs_pred": 16,
+      "skill_pred": "I",
+      "gesture_accuracy": 0.21047708138447146,
+      "smoothness": 0.8462002754211426,
+      "bilateral_coordination": 0.5204483866691589,
+      "task_duration_frames": 1068,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.683,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_D001",
+      "skill_gt": "E",
+      "grs_gt": 14,
+      "grs_pred": 12,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.245,
+      "smoothness": 0.8401625633239747,
+      "bilateral_coordination": 0.3667324185371399,
+      "task_duration_frames": 1399,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.603,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_D004",
+      "skill_gt": "E",
+      "grs_gt": 19,
+      "grs_pred": 12,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.20952380952380953,
+      "smoothness": 0.8680643359820048,
+      "bilateral_coordination": 0.39968815445899963,
+      "task_duration_frames": 1049,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.634,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_E003",
+      "skill_gt": "E",
+      "grs_gt": 22,
+      "grs_pred": 14,
+      "skill_pred": "I",
+      "gesture_accuracy": 0.08415841584158416,
+      "smoothness": 0.8555392026901245,
+      "bilateral_coordination": 0.48586350679397583,
+      "task_duration_frames": 1413,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.671,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_F001",
+      "skill_gt": "I",
+      "grs_gt": 16,
+      "grs_pred": 16,
+      "skill_pred": "I",
+      "gesture_accuracy": 0.1791530944625407,
+      "smoothness": 0.8370827277501425,
+      "bilateral_coordination": 0.5651591420173645,
+      "task_duration_frames": 920,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.701,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_G001",
+      "skill_gt": "N",
+      "grs_gt": 9,
+      "grs_pred": 12,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.22742616033755275,
+      "smoothness": 0.8511135816574097,
+      "bilateral_coordination": 0.33840620517730713,
+      "task_duration_frames": 2369,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.595,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning",
+        "Long task duration \u2014 time efficiency could be improved"
+      ]
+    },
+    {
+      "trial_id": "Knot_Tying_G004",
+      "skill_gt": "N",
+      "grs_gt": 6,
+      "grs_pred": 12,
+      "skill_pred": "N",
+      "gesture_accuracy": 0.16943435391800726,
+      "smoothness": 0.8572212855021158,
+      "bilateral_coordination": 0.3767801821231842,
+      "task_duration_frames": 3853,
+      "final_result": "success",
+      "failure_reason": null,
+      "confidence": 0.617,
+      "key_observations": [
+        "Highly smooth instrument trajectories indicating skilled control",
+        "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+        "Frequent gripper transitions \u2014 possible fumbling or repositioning",
+        "Long task duration \u2014 time efficiency could be improved"
+      ]
+    }
+  ]
+}

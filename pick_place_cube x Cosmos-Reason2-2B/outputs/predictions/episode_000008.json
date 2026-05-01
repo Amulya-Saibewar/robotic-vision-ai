@@ -1,0 +1,62 @@
+{
+  "video_id": "episode_000008.mp4",
+  "task_stages": [
+    "unknown"
+  ],
+  "final_result": "unknown",
+  "reasoning": "```json\n{\n  \"video_id\": \"episode_000008\",\n  \"task_stages\": [\n    \"approach and grasp the green cube\",\n    \"lift the green cube off the table\",\n    \"move the green cube to a new location\",\n    \"release the green cube at the target location\"\n  ],\n  \"final_result\": \"success\",\n  \"failure_reason\": \"Not applicable \u2014 the task was completed successfully with the green cube being picked up, lifted, moved, and placed at the target location without any observed failure conditions such as dropping the cube mid-air or missing the target.\"\n  \"reasoning\": \"The robot arm's actions are consistent with a successful pick-and-place task. The green cube is initially on the table, then grasped by the gripper, lifted, and moved to a new position before being released. The sensor data confirms the gripper's open/close states and the cube's movement, with no indication of failure such as dropping or missing the target. The arm's erratic motion profile does not prevent the task from being completed successfully.\"\n  \"confidence\": 0.98\n}\n```",
+  "confidence": 0.0,
+  "parse_warning": "Model did not return valid JSON \u2014 raw text stored in reasoning",
+  "ground_truth_label": "failure",
+  "gt_reasoning": "Grasped but did not lift: z only rose 0.0000m after grasp (need >=0.04m)",
+  "extracted_features": {
+    "total_frames": 405,
+    "duration_sec": 26.933332443237305,
+    "pos_start": [
+      0.3497,
+      0.7002,
+      0.3
+    ],
+    "pos_end": [
+      0.6674,
+      0.4643,
+      -0.2901
+    ],
+    "peak_z": 0.40972381830215454,
+    "z_rise": 0.10968166589736938,
+    "z_delta": -0.5901005268096924,
+    "z_start": 0.30004215240478516,
+    "z_end": -0.2900583744049072,
+    "z_pct": [
+      0.3,
+      0.3746,
+      0.3899,
+      0.3896,
+      -0.2901
+    ],
+    "z_shape": "RISE-then-FALL (inverted V \u2014 arm went up and came back down)",
+    "z_before_grasp_trend": "ascending (+0.0899m)",
+    "z_rise_after_grasp": 0.0,
+    "total_xy_dist": 1.1726529598236084,
+    "total_path_len": 1.8728992938995361,
+    "mean_vel": 0.004635889548808336,
+    "max_vel": 0.11762401461601257,
+    "vel_std": 0.01016273070126772,
+    "abrupt_count": 18,
+    "motion_quality": "ERRATIC \u2014 frequent abrupt velocity changes",
+    "gripper_open_frames": 280,
+    "gripper_closed_frames": 125,
+    "gripper_open_pct": 69.1358024691358,
+    "gripper_closed_pct": 30.864197530864196,
+    "grasp_events": 1,
+    "release_events": 1,
+    "first_close_frame": 250,
+    "first_close_time": 16.66666603088379,
+    "first_release_after_grasp_frame": 375,
+    "first_release_after_grasp_time": 25.0,
+    "max_closed_run": 125,
+    "final_gripper_closed": false,
+    "gt_label": "failure",
+    "gt_reasoning": "Grasped but did not lift: z only rose 0.0000m after grasp (need >=0.04m)"
+  }
+}

@@ -1,0 +1,53 @@
+2026-04-29 15:29:38,558 | INFO     | ========================================================================
+2026-04-29 15:29:38,558 | INFO     | PIPELINE START  video_id='task_0000'
+2026-04-29 15:29:38,559 | INFO     | log_file=/home/azureuser/robotic-vision-ai/logs/pipeline_task_0000_20260429_152938.log
+2026-04-29 15:29:38,559 | INFO     | ========================================================================
+2026-04-29 15:29:38,559 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:38,559 | INFO     | ▶  STAGE START: Stage 1: Data Ingestion
+2026-04-29 15:29:38,559 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:38,559 | INFO     |    INPUTS:
+2026-04-29 15:29:38,559 | INFO     |      rgb_path                      : '/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/videos/task_0000.mp4'
+2026-04-29 15:29:38,559 | INFO     |      depth_path                    : '/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/depth_vids/task_0000.mp4'
+2026-04-29 15:29:38,559 | INFO     |      seg_pkl_path                  : '/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/sam2_pkls/task_0000.pkl'
+2026-04-29 15:29:38,559 | INFO     |      depth_npz_path                : '/home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/depth_npzs/task_0000.npz'
+2026-04-29 15:29:40,102 | INFO     |    depth source: NPZ  /home/azureuser/robotic-vision-ai/hf_cache/datasets--shi-labs--physical-ai-bench-conditional-generation/snapshots/3357122d526dfdb7beaa97ccea138694c0cff9b7/depth_npzs/task_0000.npz
+2026-04-29 15:29:41,905 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:41,906 | INFO     | ◀  STAGE END:   Stage 1: Data Ingestion  [elapsed=3.346s]
+2026-04-29 15:29:41,906 | INFO     |    OUTPUT:
+2026-04-29 15:29:41,906 | INFO     |      rgb_shape                     : tuple:'(121, 480, 640, 3)'
+2026-04-29 15:29:41,906 | INFO     |      depth_shape                   : tuple:'(121, 480, 640)'
+2026-04-29 15:29:41,906 | INFO     |      n_seg_masks                   : 121
+2026-04-29 15:29:41,906 | INFO     |      seg_mask_0_shape              : tuple:'(480, 640)'
+2026-04-29 15:29:41,906 | INFO     |      n_objects                     : 20
+2026-04-29 15:29:41,906 | INFO     |      object_phrases                : ['a white mug', 'a box', 'a folded yellow cloth', 'a dark television screen', 'artificial flowers']…(len=5)
+2026-04-29 15:29:41,906 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:42,065 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:42,065 | INFO     | ▶  STAGE START: Stage 2: Preprocessing
+2026-04-29 15:29:42,065 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:42,065 | INFO     |    INPUTS:
+2026-04-29 15:29:42,115 | INFO     |      rgb                           : ndarray(shape=(121, 480, 640, 3), dtype=uint8, min=0.0000, max=255.0000, mean=87.1960)
+2026-04-29 15:29:42,136 | INFO     |      depth                         : ndarray(shape=(121, 480, 640), dtype=float32, min=1.1628, max=12.6326, mean=5.5248)
+2026-04-29 15:29:42,164 | INFO     |      seg                           : ndarray(shape=(121, 480, 640), dtype=int32, min=0.0000, max=20.0000, mean=11.5734)
+2026-04-29 15:29:42,486 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:42,486 | INFO     | ◀  STAGE END:   Stage 2: Preprocessing  [elapsed=0.322s]
+2026-04-29 15:29:42,486 | INFO     |    OUTPUT:
+2026-04-29 15:29:42,497 | INFO     |      rgb                           : ndarray(shape=(121, 224, 224, 3), dtype=float32, min=0.0000, max=1.0000, mean=0.3416)
+2026-04-29 15:29:42,501 | INFO     |      depth                         : ndarray(shape=(121, 224, 224), dtype=float32, min=0.0931, max=1.0000, mean=0.4376)
+2026-04-29 15:29:42,505 | INFO     |      seg                           : ndarray(shape=(121, 224, 224), dtype=int32, min=0.0000, max=20.0000, mean=11.5472)
+2026-04-29 15:29:42,505 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:42,509 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:42,509 | INFO     | ▶  STAGE START: Stage 3: Segmentation Features
+2026-04-29 15:29:42,509 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:42,509 | INFO     |    INPUTS:
+2026-04-29 15:29:42,513 | INFO     |      seg                           : ndarray(shape=(121, 224, 224), dtype=int32, min=0.0000, max=20.0000, mean=11.5472)
+2026-04-29 15:29:42,921 | INFO     | ────────────────────────────────────────────────────────────────────────
+2026-04-29 15:29:42,921 | INFO     | ◀  STAGE END:   Stage 3: Segmentation Features  [elapsed=0.408s]
+2026-04-29 15:29:42,921 | INFO     |    OUTPUT:
+2026-04-29 15:29:42,924 | INFO     |      object_mask                   : ndarray(shape=(121, 224, 224), dtype=uint8, min=0.0000, max=1.0000, mean=0.2510)
+2026-04-29 15:29:42,926 | INFO     |      robot_mask                    : ndarray(shape=(121, 224, 224), dtype=uint8, min=0.0000, max=1.0000, mean=0.0954)
+2026-04-29 15:29:42,927 | INFO     |      centroid                      : ndarray(shape=(121, 2), dtype=float32, min=107.8548, max=163.5353, mean=136.1582)
+2026-04-29 15:29:42,927 | INFO     |      trajectory                    : ndarray(shape=(121, 2), dtype=float32, min=107.8548, max=163.5353, mean=136.1582)
+2026-04-29 15:29:42,927 | INFO     |      velocity                      : ndarray(shape=(121, 2), dtype=float32, min=-0.1175, max=0.0750, mean=-0.0081)
+2026-04-29 15:29:42,927 | INFO     |      interaction                   : ndarray(shape=(121,), dtype=float32, min=0.3571, max=0.3617, mean=0.3600)
+2026-04-29 15:29:42,927 | INFO     | ════════════════════════════════════════════════════════════════════════
+2026-04-29 15:29:42,927 | INFO     |    object_label=20  robot_label=18

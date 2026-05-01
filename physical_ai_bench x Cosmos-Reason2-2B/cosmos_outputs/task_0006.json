@@ -1,0 +1,16 @@
+{
+  "video_id": "task_0006.mp4",
+  "task_stages": [
+    "approach",
+    "grasp",
+    "lift",
+    "move",
+    "regrasp",
+    "lift",
+    "move",
+    "place",
+    "release"
+  ],
+  "final_result": "success",
+  "reasoning": "The video shows two robot arms working together to manipulate a piece of clothing on a table. Initially, both arms are positioned on either side of the garment, preparing to interact with it. The left arm begins by moving towards the left side of the shirt, while the right arm moves towards the right side. Both arms then grasp the respective sides of the shirt, lifting it slightly off the table. Next, the arms coordinate to lift the shirt higher, ensuring a firm grip. After lifting, they move the shirt towards the center of the table, aligning it for further manipulation. The arms then place the shirt back onto the table, adjusting its position to ensure it is properly laid out. Finally, the arms release their grip, completing the task of placing the shirt on the table."
+}

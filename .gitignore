@@ -1,0 +1,29 @@
+# Large files
+*.zip
+*.tar
+*.gz
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.h5
+
+# Datasets
+data/
+datasets/
+RoboREFLECT_dataset/
+cosmos/
+real_data/
+
+# Large dataset/model directories (too large for GitHub)
+hf_cache/
+Liberodatset_ROBOT MONITORING/
+RoboREFLECT x Cosmos-Reason2-2B/
+physical_ai_bench x hybrid_approach 2/
+Jigsaw/Knot_Tying/
+
+# Python junk
+__pycache__/
+.ipynb_checkpoints/
+*.pyc
+.env

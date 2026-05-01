@@ -1,0 +1,11 @@
+# ── Python dependencies ────────────────────────────────────────────────────────
+# Install with:  pip install -r requirements.txt
+
+torch>=2.2.0
+torchvision>=0.17.0
+transformers>=4.45.0          # needs AutoModelForImageTextToText + Cosmos support
+accelerate>=0.30.0            # device_map="auto" multi-GPU / offload support
+datasets>=2.19.0              # HuggingFace datasets with streaming
+huggingface_hub>=0.22.0       # login() helper
+av>=12.0.0                    # PyAV – fast video decoding (wraps FFmpeg)
+Pillow>=10.0.0                # PIL image handling

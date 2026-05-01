@@ -1,0 +1,2 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: av in /home/azureuser/.local/lib/python3.10/site-packages (17.0.1)

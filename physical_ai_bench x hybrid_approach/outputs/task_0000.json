@@ -1,0 +1,10 @@
+{
+  "video_id": "task_0000",
+  "task_stages": [
+    "move"
+  ],
+  "final_result": "success",
+  "confidence": 0.9711,
+  "used_cosmos": true,
+  "reasoning": "```json\n{\n  \"task_stages\": [\n    \"move\"\n  ],\n  \"final_result\": \"success\",\n  \"failure_reason\": \"\",\n  \"reasoning\": \"The robot moved steadily in a stable environment with no significant interaction or depth changes, indicating a smooth and controlled motion.\"\n}\n```"
+}

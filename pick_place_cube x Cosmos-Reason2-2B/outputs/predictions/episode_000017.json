@@ -1,0 +1,65 @@
+{
+  "video_id": "episode_000017.mp4",
+  "task_stages": [
+    "approach and align with the green cube",
+    "close the gripper to grasp the cube",
+    "lift the cube vertically",
+    "move the cube horizontally to the target location",
+    "release the cube at the target location"
+  ],
+  "final_result": "success",
+  "reasoning": "The robot arm's actions align with the task requirements. The gripper closes around the green cube, lifts it off the table, moves it to a new location, and releases it. The sensor data confirms the gripper's position and movement, with no indication of failure during the process. The cube is successfully placed at the target location after the sequence of movements and releases.",
+  "confidence": 0.0,
+  "ground_truth_label": "failure",
+  "gt_reasoning": "Grasped but did not lift: z only rose 0.0000m after grasp (need >=0.04m)",
+  "extracted_features": {
+    "total_frames": 329,
+    "duration_sec": 21.866666793823242,
+    "pos_start": [
+      0.3497,
+      0.7002,
+      0.3
+    ],
+    "pos_end": [
+      0.6604,
+      0.4513,
+      -0.32
+    ],
+    "peak_z": 0.3799084424972534,
+    "z_rise": 0.07986629009246826,
+    "z_delta": -0.6200896501541138,
+    "z_start": 0.30004215240478516,
+    "z_end": -0.3200474977493286,
+    "z_pct": [
+      0.3,
+      0.3006,
+      0.3799,
+      0.1757,
+      -0.32
+    ],
+    "z_shape": "RISE-then-FALL (inverted V \u2014 arm went up and came back down)",
+    "z_before_grasp_trend": "ascending (+0.0799m)",
+    "z_rise_after_grasp": 0.0,
+    "total_xy_dist": 1.0906813144683838,
+    "total_path_len": 1.7921054363250732,
+    "mean_vel": 0.0054637361317873,
+    "max_vel": 0.05877599120140076,
+    "vel_std": 0.010595549829304218,
+    "abrupt_count": 23,
+    "motion_quality": "ERRATIC \u2014 frequent abrupt velocity changes",
+    "gripper_open_frames": 209,
+    "gripper_closed_frames": 120,
+    "gripper_open_pct": 63.525835866261396,
+    "gripper_closed_pct": 36.474164133738604,
+    "grasp_events": 1,
+    "release_events": 1,
+    "first_close_frame": 178,
+    "first_close_time": 11.866666793823242,
+    "first_release_after_grasp_frame": 298,
+    "first_release_after_grasp_time": 19.866666793823242,
+    "max_closed_run": 120,
+    "final_gripper_closed": false,
+    "gt_label": "failure",
+    "gt_reasoning": "Grasped but did not lift: z only rose 0.0000m after grasp (need >=0.04m)"
+  }
+}

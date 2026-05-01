@@ -1,0 +1,8 @@
+{
+  "video_id": "task_0000.mp4",
+  "task_stages": [
+    "unknown"
+  ],
+  "failure_reason": "```json\n{\n  \"video_id\": \"vm_0000\",\n  \"task_stages\": [],\n  \"final_result\": \"success\",\n  \"reasoning\": \"The video frames show a stationary setup with two robot arms positioned on either side of a table. The table holds a white mug with a cartoon design, a tissue box, a flower vase, and a small bag of tea. Both robot arms are idle, with no movement observed in any of the frames provided. There are no actions such as grasping, lifting, moving, placing, or releasing performed by the robot arms. The objects remain static, and the scene does not depict any task progression or interaction between the robot arms and the objects on the table. The video does not provide enough frames to observe a sequence of actions, but based on the current state, the task appears to be in a pre-action or idle phase without any visible success or failure in completing the task.\"\n  \"confidence\": 0.03\n}\n```",
+  "parse_warning": "Model did not return valid JSON \u2014 raw output stored above"
+}

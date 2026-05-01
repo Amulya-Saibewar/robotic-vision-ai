@@ -1,0 +1,15 @@
+{
+  "video_id": "task_0003.mp4",
+  "task_stages": [
+    "approach",
+    "grasp",
+    "lift",
+    "move",
+    "retract",
+    "release",
+    "retract",
+    "release"
+  ],
+  "final_result": "success",
+  "reasoning": "The video shows two robot arms working together to manipulate a piece of khaki-colored fabric on a blue table. Robot Arm 1, with its gripper open, approaches the fabric from the left side. It then closes its gripper to grasp the fabric near its edge. After securing the fabric, Robot Arm 1 lifts it slightly off the table. Simultaneously, Robot Arm 2, positioned on the right, holds the fabric\u2019s edge and adjusts its grip. Both arms coordinate to move the fabric, with Robot Arm 1 pulling it while Robot Arm 2 stabilizes it. The fabric is then released by Robot Arm 1, allowing it to settle back onto the table. The sequence ends with both arms retracting slightly after releasing the fabric, completing the manipulation task successfully."
+}

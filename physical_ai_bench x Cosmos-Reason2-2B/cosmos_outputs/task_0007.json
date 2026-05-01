@@ -1,0 +1,14 @@
+{
+  "video_id": "task_0007.mp4",
+  "task_stages": [
+    "approach",
+    "grasp",
+    "lift",
+    "move",
+    "place",
+    "release",
+    "retract"
+  ],
+  "final_result": "success",
+  "reasoning": "The video shows two robot arms positioned on either side of a cardboard box on a table. The box is open and empty, with air column wrap and small red and white boxes nearby. Robot Arm 1 is on the left and remains stationary throughout the frames. Robot Arm 2 is on the right and begins by moving its end effector towards the air column wrap. It then grasps the air column wrap, lifts it slightly off the table, and moves it away from the box. The air column wrap is then placed back on the table, but not inside the box. The task involves manipulating the air column wrap, which is completed by the robot arm's actions. The video does not show any other objects being interacted with, and the main focus is on the air column wrap and the box. The robot arms do not collide or interfere with each other, and the movements are smooth and controlled, indicating a successful manipulation task."
+}

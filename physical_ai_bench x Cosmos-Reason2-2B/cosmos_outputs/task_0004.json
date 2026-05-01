@@ -1,0 +1,15 @@
+{
+  "video_id": "task_0004.mp4",
+  "task_stages": [
+    "approach",
+    "grasp",
+    "lift",
+    "move",
+    "regrasp",
+    "lift",
+    "move",
+    "place"
+  ],
+  "final_result": "success",
+  "reasoning": "The video shows two robot arms working together to manipulate a piece of denim clothing on a bed. Initially, both arms are positioned above the bed, preparing to interact with the fabric. The left arm moves closer to the clothing, adjusting its position for optimal contact. It then grasps the material firmly, ensuring a secure hold. The right arm mirrors this action, also grasping the same section of the fabric. Both arms coordinate to lift the clothing slightly off the bed, indicating the start of a folding process. They continue to adjust their grip, moving the fabric in a controlled manner, likely to fold it neatly. The arms maintain their coordinated effort, ensuring the fabric is handled smoothly without slipping or tearing. The final stage involves placing the folded portion onto the bed, completing the task with precision and care."
+}

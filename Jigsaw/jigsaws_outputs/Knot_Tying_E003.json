@@ -1,0 +1,228 @@
+{
+  "trial_id": "Knot_Tying_E003",
+  "skill_level_gt": "E",
+  "grs_total_gt": 22,
+  "grs_components_gt": {
+    "respect_for_tissue": 3,
+    "suture_needle_handling": 4,
+    "time_and_motion": 3,
+    "flow_of_operation": 4,
+    "overall_performance": 4,
+    "quality_of_final_product": 4
+  },
+  "gt_gesture_segments": [
+    {
+      "start": 163,
+      "end": 242,
+      "gesture_id": "G1",
+      "gesture_name": "reaching_for_suture"
+    },
+    {
+      "start": 243,
+      "end": 399,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 400,
+      "end": 503,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 504,
+      "end": 571,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 572,
+      "end": 751,
+      "gesture_id": "G15",
+      "gesture_name": "pulling_suture_left"
+    },
+    {
+      "start": 752,
+      "end": 883,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 884,
+      "end": 975,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 976,
+      "end": 1054,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 1055,
+      "end": 1101,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 1102,
+      "end": 1249,
+      "gesture_id": "G15",
+      "gesture_name": "pulling_suture_left"
+    },
+    {
+      "start": 1250,
+      "end": 1360,
+      "gesture_id": "G11",
+      "gesture_name": "releasing_needle_return"
+    }
+  ],
+  "predicted_gesture_segments": [
+    {
+      "start": 1,
+      "end": 148,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 149,
+      "end": 233,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 234,
+      "end": 306,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 307,
+      "end": 377,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 378,
+      "end": 483,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 484,
+      "end": 549,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 550,
+      "end": 625,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 626,
+      "end": 731,
+      "gesture_id": "G13",
+      "gesture_name": "positioning_needle"
+    },
+    {
+      "start": 732,
+      "end": 856,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 857,
+      "end": 924,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 925,
+      "end": 1090,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 1091,
+      "end": 1197,
+      "gesture_id": "G14",
+      "gesture_name": "pushing_needle_through"
+    },
+    {
+      "start": 1198,
+      "end": 1281,
+      "gesture_id": "G12",
+      "gesture_name": "reaching_for_needle"
+    },
+    {
+      "start": 1282,
+      "end": 1351,
+      "gesture_id": "G15",
+      "gesture_name": "pulling_suture_left"
+    },
+    {
+      "start": 1352,
+      "end": 1413,
+      "gesture_id": "G11",
+      "gesture_name": "releasing_needle_return"
+    }
+  ],
+  "gesture_accuracy": 0.08415841584158416,
+  "quality": {
+    "normalized_jerk_ml": 4.637170314788818,
+    "normalized_jerk_mr": 4.030477523803711,
+    "smoothness_score": 0.8555392026901245,
+    "bilateral_coordination": 0.48586350679397583,
+    "task_duration_frames": 1413,
+    "gesture_count": 11,
+    "gripper_event_rate": 15.92356687898089,
+    "path_length_ml": 1.0308177471160889,
+    "path_length_mr": 1.3449788093566895,
+    "speed_efficiency": 0.05044153940618342,
+    "predicted_grs": 16.0,
+    "predicted_skill": "I"
+  },
+  "cosmos_output": {
+    "trial_id": "Knot_Tying_E003",
+    "task_stages": [
+      "positioning_needle",
+      "reaching_for_needle",
+      "positioning_needle",
+      "positioning_needle",
+      "pushing_needle_through",
+      "positioning_needle",
+      "positioning_needle",
+      "positioning_needle",
+      "reaching_for_needle",
+      "pushing_needle_through",
+      "reaching_for_needle",
+      "pushing_needle_through",
+      "reaching_for_needle",
+      "pulling_suture_left",
+      "releasing_needle_return"
+    ],
+    "final_result": "success",
+    "failure_reason": null,
+    "quality_assessment": {
+      "smoothness": 4,
+      "instrument_handling": 1,
+      "time_efficiency": 4,
+      "flow_of_operation": 1,
+      "overall_performance": 2,
+      "final_product_quality": 2
+    },
+    "predicted_skill_level": "I",
+    "predicted_grs_total": 14,
+    "key_observations": [
+      "Highly smooth instrument trajectories indicating skilled control",
+      "Poor arm synchronisation \u2014 left-right coordination needs improvement",
+      "Frequent gripper transitions \u2014 possible fumbling or repositioning"
+    ],
+    "confidence": 0.671,
+    "source": "heuristic_fallback"
+  },
+  "processing_time_s": 0.02
+}
